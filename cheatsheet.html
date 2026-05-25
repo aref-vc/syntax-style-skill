@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Syntax Style — Cheatsheet</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --paper:#fbf8f0; --paper2:#f4efde;
+    --accent:#b3261e; --muted:#6b665d; --rule:#d8d2c4;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper2);}
+  body{
+    font-family:"Iowan Old Style","Charter",Georgia,serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    width:1100px; margin:0 auto; background:var(--paper);
+    padding:54px 60px 48px;
+  }
+  header{border-bottom:2px solid var(--ink); padding-bottom:14px; margin-bottom:26px;}
+  h1{font-size:38px; font-weight:400; margin:0; letter-spacing:.01em;}
+  .sub{font-style:italic; font-size:15px; color:var(--muted); margin-top:6px;}
+  .src{font-size:12px; color:var(--muted); margin-top:4px;}
+  .model{
+    background:var(--paper2); border:1px solid var(--rule);
+    padding:16px 20px; margin-bottom:26px; font-size:14px;
+  }
+  .model b{color:var(--accent);}
+  .model code{font-family:"SF Mono",Menlo,monospace; font-size:12.5px; color:var(--ink);}
+  h2{font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
+     font-weight:400; margin:0 0 12px; border-bottom:.5px solid var(--rule); padding-bottom:5px;}
+  .cols{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  table{border-collapse:collapse; width:100%; font-size:13px;}
+  td{padding:5px 8px 5px 0; vertical-align:top; border-bottom:.5px solid var(--rule);}
+  td.n{color:var(--accent); font-family:"SF Mono",Menlo,monospace; font-size:11px; width:22px;}
+  td.move{font-weight:600; width:165px;}
+  td.job{color:var(--muted); font-style:italic;}
+  .kill td.move{font-weight:600; color:var(--ink);}
+  .ex{font-size:13px; margin-top:4px;}
+  .ex .b{color:var(--muted);}
+  .ex .a{color:var(--ink);}
+  footer{margin-top:30px; border-top:.5px solid var(--rule); padding-top:12px;
+         font-size:11.5px; color:var(--muted); display:flex; justify-content:space-between;}
+  .two-rules{display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px; margin-top:8px;}
+  .rule-box{font-size:13px;}
+  .rule-box b{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Syntax Style</h1>
+    <div class="sub">Sentence-level craft, on demand.</div>
+    <div class="src">Distilled from Virginia Tufte, <i>Artful Sentences: Syntax as Style</i> (Graphics Press, 2006).</div>
+  </header>
+
+  <div class="model">
+    <b>The model:</b> a <b>base clause</b> plus <b>free modifiers</b> at the front, middle, or end. Same model, two words or sixty.
+    &nbsp; <code>The engine failed</code> → <code>The engine failed, a cough then silence, the boat drifting toward the rocks.</code>
+    &nbsp; Right-branching cumulative is the workhorse; the artful version is often <i>longer</i>. Monotone (all short) and fog (nested clauses) flank it.
+  </div>
+
+  <div class="cols">
+    <div>
+      <h2>The 14 moves — goal → structure</h2>
+      <table>
+        <tr><td class="n">1</td><td class="move">Short sentence</td><td class="job">finality, by contrast with long ones</td></tr>
+        <tr><td class="n">2</td><td class="move">Noun phrase</td><td class="job">name densely; climactic appositive</td></tr>
+        <tr><td class="n">3</td><td class="move">Verb phrase</td><td class="job">drive; voice as a tool</td></tr>
+        <tr><td class="n">4</td><td class="move">Adjective / adverb</td><td class="job">texture; mobile placement</td></tr>
+        <tr><td class="n">5</td><td class="move">Preposition</td><td class="job">place, direction, time, agency</td></tr>
+        <tr><td class="n">6</td><td class="move">Coordination</td><td class="job">accumulate; close a narrative</td></tr>
+        <tr><td class="n">7</td><td class="move">Dependent clause</td><td class="job">rank one idea under another</td></tr>
+        <tr><td class="n">8</td><td class="move">Opener / inversion</td><td class="job">emphasis by word order</td></tr>
+        <tr><td class="n">9</td><td class="move">Free modifier / branch</td><td class="job">build a long, clear sentence</td></tr>
+        <tr><td class="n">10</td><td class="move">Appositive</td><td class="job">rename; delay key words to the end</td></tr>
+        <tr><td class="n">11</td><td class="move">Question / command</td><td class="job">shift mood, address reader</td></tr>
+        <tr><td class="n">12</td><td class="move">Parallelism</td><td class="job">balance &amp; antithesis (pairs, not triads)</td></tr>
+        <tr><td class="n">13</td><td class="move">Cohesion</td><td class="job">flow between sentences</td></tr>
+        <tr><td class="n">14</td><td class="move">Syntactic symbolism</td><td class="job">form enacts meaning, any direction</td></tr>
+      </table>
+
+      <h2 style="margin-top:24px;">One transformation</h2>
+      <div class="ex">
+        <div class="b">There was a reduction in costs as a result of the team's optimization of the pipeline.</div>
+        <div class="a"><b>→</b> The team optimized the pipeline and costs fell.</div>
+      </div>
+      <div class="ex" style="margin-top:10px;">
+        <div class="b">It's not just a tool, it's a platform that transforms your workflow.</div>
+        <div class="a"><b>→</b> The tool became a platform.</div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Kill list — flat &amp; AI tells</h2>
+      <table class="kill">
+        <tr><td class="move">Monotone</td><td class="job">vary length both ways (1, 8, 9)</td></tr>
+        <tr><td class="move">Choppiness (all short)</td><td class="job">build one cumulative sentence (9, 6)</td></tr>
+        <tr><td class="move">Bound-modifier glut</td><td class="job">clean base + free modifiers (2, 9)</td></tr>
+        <tr><td class="move">Triad reflex</td><td class="job">prefer the pair / antithesis (12)</td></tr>
+        <tr><td class="move">Nominalization fog</td><td class="job">restore the verb (3)</td></tr>
+        <tr><td class="move">Impersonal passive</td><td class="job">name the agent (3)</td></tr>
+        <tr><td class="move">"and … and … and" (unequal)</td><td class="job">parallel or subordinate (6, 7, 12)</td></tr>
+        <tr><td class="move">Intensifier clutter</td><td class="job">cut very/really/actually (4)</td></tr>
+        <tr><td class="move">All declarative</td><td class="job">one question or command (11)</td></tr>
+        <tr><td class="move">Reveal stack / deck cadence</td><td class="job">combine fragments (6, 9)</td></tr>
+        <tr><td class="move">"not just X, it's Y"</td><td class="job">state it / appositive (1, 10)</td></tr>
+        <tr><td class="move">Em-dash overuse</td><td class="job">comma, colon, or split (10)</td></tr>
+        <tr><td class="move">Throat-clearing openers</td><td class="job">front the subject (8)</td></tr>
+        <tr><td class="move">Synonym churn</td><td class="job">repeat the key term (13)</td></tr>
+      </table>
+
+      <h2 style="margin-top:24px;">Three rules that override the rest</h2>
+      <div class="two-rules">
+        <div class="rule-box"><b>Repetition is a tool.</b> Deliberate repetition builds rhythm. Kill accidental sameness, keep the chosen move.</div>
+        <div class="rule-box"><b>Variation cuts both ways.</b> All-short is monotone too. Set a long sentence next to a short one.</div>
+        <div class="rule-box"><b>Shorter isn't better.</b> Fix a bad long sentence with a clean base + free modifiers. Prefer the pair to the triad.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>Syntax Style — a Claude skill</span>
+    <span>Example sentences written for the skill; none reproduced from the book.</span>
+  </footer>
+</div>
+</body>
+</html>
